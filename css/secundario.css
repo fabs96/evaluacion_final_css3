@@ -1,0 +1,93 @@
+body{
+  background: #02010a;
+  font-family: 'Dancing Script', cursive;
+      }
+header{
+  background: #5b7989;
+  text-align: left;
+  color: white;
+  text-shadow: 2px #02010a;
+  border-radius: 10px 10px 0px 0px;
+  animation: Mianimacion 3s;
+}
+header nav{
+  text-align: right;
+}
+header nav a{
+  text-decoration: none;
+  color:white;
+}
+img{
+  display: block;
+  margin:auto;
+}
+#contenido{
+  max-width: 900px;
+  margin:0 auto;
+  background: #d5c75f;
+}
+.imagenes{
+  display: flex;
+  flex-flow: row wrap;
+
+
+}
+ .imagen img{
+   display: block;
+   margin: 10px;
+ }
+ #imagen1{
+   filter: blur(10px);
+   -webkit-filter:blur(10px);
+ }
+ .imagen img:nth-child(even){
+   filter:grayscale(100%);
+   -webkit-filter:grayscale(100%);
+   -moz-filter:grayscale(100%);
+ }
+ #imagen3{
+   filter: sepia(90%);
+   -webkit-filter:sepia(90%);
+   -moz-filter:sepia(90%);
+ }
+
+
+
+footer{
+  margin-top:10px;
+  background-color: #C6d5c5;
+  -webkit-column-count:4;
+  -moz-column-count:4;
+  column-count: 4;
+
+  -webkit-column-gap:2rem;
+  -moz-colum-gap:2rem;
+  column-gap: 2rem;
+}
+
+@webkit-keyframes Mianimacion {
+  0%{
+    margin-top: 150px;
+  }
+  60%{
+    margin-top: -5px;
+  }
+  100%{
+    margin-top:0px;
+  }
+}
+
+@media (min-width=320px) and (max-width=900px){
+  #contenido{
+    width: 100%;
+  }
+  footer{
+    column-count: 1;
+    -moz-column-count:1;
+    -webkit-column-count:1;
+  }
+  header{
+    animation: Mianimacion 3s;
+  }
+
+}
